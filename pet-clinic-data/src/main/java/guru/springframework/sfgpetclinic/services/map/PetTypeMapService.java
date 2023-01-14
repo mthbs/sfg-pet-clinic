@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
 @Service
 @Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
@@ -17,13 +18,8 @@ public class PetTypeMapService extends AbstractMapService<PetType, Long> impleme
     }
 
     @Override
-    public void deleteById(Long id) {
-        super.deleteById(id);
-    }
-
-    @Override
-    public void delete(PetType object) {
-        super.delete(object);
+    public PetType findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
@@ -32,7 +28,12 @@ public class PetTypeMapService extends AbstractMapService<PetType, Long> impleme
     }
 
     @Override
-    public PetType findById(Long id) {
-        return super.findById(id);
+    public void deleteById(Long id) {
+        super.deleteById(id);
+    }
+
+    @Override
+    public void delete(PetType object) {
+        super.delete(object);
     }
 }

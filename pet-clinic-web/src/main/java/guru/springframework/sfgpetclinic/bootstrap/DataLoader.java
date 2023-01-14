@@ -21,9 +21,13 @@ import java.time.LocalDate;
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
+
     private final VetService vetService;
+
     private final PetTypeService petTypeService;
+
     private final SpecialtyService specialtyService;
+
     private final VisitService visitService;
 
     public DataLoader(
@@ -44,7 +48,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         int count = petTypeService.findAll().size();
-        if(count == 0) {
+        if (count == 0) {
             loadData();
         }
     }
@@ -73,8 +77,7 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
-        owner1.setAddress("123" +
-                " Bickerlei");
+        owner1.setAddress("123" + " Bickerlei");
         owner1.setCity("Miami");
         owner1.setTelephone("2154654241");
 

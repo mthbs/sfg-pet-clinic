@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
 @Service
 @Profile({"default", "map"})
 public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
@@ -17,13 +18,8 @@ public class SpecialtyMapService extends AbstractMapService<Specialty, Long> imp
     }
 
     @Override
-    public void deleteById(Long id) {
-        super.deleteById(id);
-    }
-
-    @Override
-    public void delete(Specialty object) {
-        super.delete(object);
+    public Specialty findById(Long id) {
+        return super.findById(id);
     }
 
     @Override
@@ -32,7 +28,12 @@ public class SpecialtyMapService extends AbstractMapService<Specialty, Long> imp
     }
 
     @Override
-    public Specialty findById(Long id) {
-        return super.findById(id);
+    public void deleteById(Long id) {
+        super.deleteById(id);
+    }
+
+    @Override
+    public void delete(Specialty object) {
+        super.delete(object);
     }
 }

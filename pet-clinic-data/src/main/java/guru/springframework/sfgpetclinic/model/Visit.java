@@ -13,13 +13,14 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name="visits")
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
     @Column(name = "date")
